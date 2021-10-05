@@ -1,0 +1,8 @@
+if(!require(dplyr)) install.packages("dplyr")
+library(dplyr)
+dados <- read.csv('Banco de Dado 2.csv', sep = ';')
+View(dados)
+glimpse(dados)
+shapiro.test(dados$Altura)
+t.test(dados$Altura, mu = 167)
+boxplot(dados$Altura, ylab = "Altura (cm)")
